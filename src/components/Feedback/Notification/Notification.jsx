@@ -1,5 +1,7 @@
+import { StatisticText } from '../Statistics/Statistics.styled';
+
 const Notification = ({ message }) => {
-  return <h4>{message}</h4>;
+  return <StatisticText>{message}</StatisticText>;
 };
 
 export default Notification;

@@ -1,23 +1,13 @@
-import { FeedbackBtn } from "./FeedbackOptions.styled";
+import { FeedbackBtn } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-  // console.log(options);
-  const keys = Object.keys(options);
-  return (
-    <>
-      {keys.map((key) => (
-        <FeedbackBtn
-          type="button"
-          key={key}
-          onClick={() => {
-            onLeaveFeedback(key);
-          }}
-        >
-          {key}
-        </FeedbackBtn>
-      ))}
-    </>
-  );
+  return options.map(item => {
+    return (
+      <FeedbackBtn type="button" key={item} onClick={onLeaveFeedback}>
+        {item}
+      </FeedbackBtn>
+    );
+  });
 };
 
 export default FeedbackOptions;
